@@ -28,6 +28,6 @@ pessoa2.falar(); // Chamada do metodo falara() da Classe Pessoa
 pessoa2.falarIdade(); // Chamada do metodo falara() da
 
 
-const pessoa3 = new Pessoa('Allan', 22, 1.85, 78);
+const pessoa3 = new Pessoa('Matheo', 16, 1.86, 78);
 pessoa3.falar(); // Chamada do metodo falara() da Classe Pessoa
 pessoa3.falarIdade();
