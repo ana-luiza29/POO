@@ -7,6 +7,7 @@ class Pessoa {
     this.nome = nome;
     this.idade = idade;
     this.genero = genero;
+    
   }
   // metodos
   falar() {
