@@ -25,7 +25,7 @@ pessoa1.falarIdade(); //
 
 const pessoa2 = new Pessoa('Allan', 22, 1.85, 78);
 pessoa2.falar(); // Chamada do metodo falara() da Classe Pessoa
-pessoa2.falarIdade(); // Chamada do metodo falara() da
+pessoa2.falarNome(); // Chamada do metodo falara() da
 
 
 const pessoa3 = new Pessoa('Matheo', 16, 1.86, 78);
