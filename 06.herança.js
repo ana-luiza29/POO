@@ -18,6 +18,7 @@ class Estudante extends Pessoa {
   }
 }
 
+
 //Classe Funcionario que herda de Pessoa
 class Funcionario extends Pessoa {
   constructor(nome, idade, altura, peso, salario) {
