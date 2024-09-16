@@ -16,13 +16,13 @@ class Veiculo {
 }
 
 class Carro extends Veiculo {
-  constructor(marca, ano, cor, preco, modelo, numPortas, tipodecombustivel) {
+  constructor(marca, ano, cor, preco, modelo, numPortas, tipoDeCombustivel) {
     super(marca, ano, cor, preco, modelo);
     this.numPortas = numPortas;
-    this.tipodecombustivel = tipodecombustivel;
+    this.tipoDeCombustivel = tipoDeCombustivel;
   }
   ligar() {
-    console.log(`${this.marca} ${this.modelo}  esta ligado com o motor a  ${this.tipodecombustivel}`);
+    console.log(`${this.marca} ${this.modelo}  esta ligado com o motor a  ${this.tipoDeCombustivel}`);
   }
 
   desligar() {
@@ -31,17 +31,17 @@ class Carro extends Veiculo {
 }
 
 class Aviao extends Veiculo {
-  constructor(marca, ano, cor, preco, modelo, numassentos, nummotores) {
+  constructor(marca, ano, cor, preco, modelo, numAssentos, numMotores) {
     super(marca, ano, cor, preco, modelo);
-    this.numassentos = numassentos;
-    this.nummotores = nummotores;
+    this.numAsentos = numAssentos;
+    this.numMotores = numMotores;
   }
 
   ligar() {
-    console.log(`${this.marca} ${this.modelo}  esta ligado com ${this.nummotores} a  Flex`);
+    console.log(`${this.marca} ${this.modelo}  esta ligado com ${this.numMotores} a  Flex`);
   }
   desligar() {
-    console.log(`${this.marca} ${this.modelo} com a ${this.numassentos} assentos esta desligando.`);
+    console.log(`${this.marca} ${this.modelo} com a ${this.numAssentos} assentos esta desligando.`);
   }
 }
 
