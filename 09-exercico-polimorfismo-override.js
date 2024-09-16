@@ -30,9 +30,32 @@ class Carro extends Veiculo {
   }
 }
 
+class Aviao extends Veiculo {
+  constructor(marca, ano, cor, preco, modelo, numassentos, nummotores) {
+    super(marca, ano, cor, preco, modelo);
+    this.numassentos = numassentos;
+    this.nummotores = nummotores;
+  }
+
+  ligar() {
+    console.log(`${this.marca} ${this.modelo}  esta ligado com ${this.nummotores} a  Flex`);
+  }
+  desligar() {
+    console.log(`${this.marca} ${this.modelo} com a ${this.numassentos} assentos esta desligando.`);
+  }
+}
+
+// Criando instancia de aviões
+
+const aviao1 = new Aviao("Airbus", 2022, "Vermelho", 3999.999, "A380", 240, 4);
+const aviao2 = new Aviao("Boeing", 2020, "Preto", 1499.999, "777", 180, 2);
+
+aviao1.ligar(); // Saida: A esse é Airbus A380  esta ligado com o motor a  Flex
+aviao1.desligar(); // Saida: A esse é Airbus A380 com a 240 assentos esta desligando.
+
 // Criando instancia de carros
 const carro1 = new Carro("Toyota", 2024, "Azul", 343.523, "Sw4", 4, "Flex");
-const carro2 = new Carro("Volkswagen", 2024, "Preto", 119.990, "Nivus", 4, "Gasolina");
+const carro2 = new Carro("Volkswagen", 2024, "cinza", 119.990, "Nivus", 4, "Gasolina");
 
 carro1.ligar(); // Saida: A esse é Toyota Sw4  esta ligado com o motor a  Flex
 carro1.desligar(); // Saida: A esse é Toyota Sw4 com a 4 portas esta desligando.
