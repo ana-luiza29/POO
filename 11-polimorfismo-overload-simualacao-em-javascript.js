@@ -28,3 +28,4 @@ class Personagem {
         console.log(`${this.nome} recebeu ${dano} de dano. Vida restante: ${this.vida}`);
     }
 }
+
