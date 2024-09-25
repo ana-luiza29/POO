@@ -24,7 +24,7 @@ class Personagem {
   get classes() {
     return this.#classes;
   }
-  set classes(classes) {
+  set classes(classes) { 
     this.#classes = classes;
   }
   get nivel() {
