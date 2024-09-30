@@ -16,3 +16,19 @@ class Personagem {
         throw new Error("0 metodo defender() dever ser implementado pela classe derivada");
     }
 }
+
+// Classe derivada "Guerreiro" 
+class Guerreiro extends Personagem {
+    constructor(nome, arma ) {
+        super(nome);
+        this.arma = arma;
+    }
+// Implementação dos metodos abstratos da classe Personage
+    atacar() {
+        console.log(`${this.nome} ataca com ${this.arma}!`);
+    }
+
+    defender() {
+        console.log(`${this.nome} levanta o escudo para se defender!`);
+    }
+}
