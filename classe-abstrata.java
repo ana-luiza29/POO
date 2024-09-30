@@ -11,3 +11,20 @@ abstract class Personagens {
 public abstract void atacar();
 public abstract void defender();
   }
+
+  // Classe derivada "Guerreiro"
+  class Guerreiro extends Personagens {
+    private String arma;
+
+    // Sobrescrita do metodo Atacar da classe Personagem
+    @override
+    public void atacar() {
+        System.out.println(nome + " ataca com a " + arma + "!");
+    }  
+
+    // Sobrescrita do metodo defender da classe Abstrata Personagem
+    @Override
+    public void defender() {
+        System.out.println(nome + " levantando o escudo para se defender!");
+    }
+  }
