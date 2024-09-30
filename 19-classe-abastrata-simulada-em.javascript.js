@@ -48,3 +48,17 @@ class Mago extends Personagem {
         console.log(`${this.nome} usa um escudo mágico para se defender!`);
     }
 }
+// Criando instancias e testando o comportamento
+try {
+    const personagem = new Personagem("inaválido") // isso vai lançar um erro
+} catch (error) {
+    console.log(error.message); // "Não é possi´vel instanciar a classe abstrata Personagem diretamente"
+}
+
+const guerreiro = new Guerreiro("Thorin", "Espada"); 
+guerreiro.atacar(); // Saída: Thorin ataca com espada
+guerreiro.defender(); // Saída: Thorin defende com o escudo
+
+const mago = new Mago("Gandalf", "Bola de Fogo");
+mago.atacar(); // Saída: "Gandalf lança a magia Bola de fogo!"
+mago.defender(); // Saida: "Gandalf usa um escudo magico para se defender"
