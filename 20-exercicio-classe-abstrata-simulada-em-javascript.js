@@ -9,6 +9,7 @@ class Personagem {
   #arma;
   #magia;
   #habilidadeEspecial;
+
   constructor(
     nome,
     vida,
@@ -63,7 +64,9 @@ class Personagem {
   }
 
   info() {
-    throw new Error('Método "info()" deve ser implementado na classe derivada.');
+    throw new Error(
+      'Método "info()" deve ser implementado na classe derivada.'
+    );
   }
 
   // Getters e Setters
@@ -141,6 +144,7 @@ class Personagem {
 class Guerreiro extends Personagem {
   #armadura;
   #potenciaAtaque;
+
   constructor(
     nome,
     vida,
@@ -181,20 +185,12 @@ class Guerreiro extends Personagem {
     return `${this.nome} se defende usando sua armadura!`;
   }
 
-  usarMagia() {
-    return `${this.nome} não pode usar magia!`;
-  }
-
   ganharExperiencia() {
     this.experiencia += 100;
   }
 
   info() {
-    return `Guerreiro: ${this.nome}, Vida: ${this.vida}, Força: ${
-      this.forca
-    }, Defesa: ${this.defesa}, Armadura: ${
-      this.#armadura
-    }, Potência de Ataque: ${this.#potenciaAtaque}`;
+    return `Guerreiro: ${this.nome}, Vida: ${this.vida}, Força: ${this.forca}, Defesa: ${this.defesa}, Armadura: ${this.#armadura}, Potência de Ataque: ${this.#potenciaAtaque}`;
   }
 
   gritarGuerra() {
@@ -205,6 +201,7 @@ class Guerreiro extends Personagem {
 class Mago extends Personagem {
   #nivelMagia;
   #elemento;
+
   constructor(
     nome,
     vida,
@@ -235,7 +232,7 @@ class Mago extends Personagem {
     this.#elemento = elemento;
   }
 
-  atacar(tipoAtaque) {
+  atacar() {
     return `${this.nome} ataca com um feitiço de ${this.#elemento}!`;
   }
 
@@ -252,11 +249,7 @@ class Mago extends Personagem {
   }
 
   info() {
-    return `Mago: ${this.nome}, Vida: ${this.vida}, Força: ${
-      this.forca
-    }, Defesa: ${this.defesa}, Nível de Magia: ${this.#nivelMagia}, Elemento: ${
-      this.#elemento
-    }`;
+    return `Mago: ${this.nome}, Vida: ${this.vida}, Força: ${this.forca}, Defesa: ${this.defesa}, Nível de Magia: ${this.#nivelMagia}, Elemento: ${this.#elemento}`;
   }
 
   invocar() {
@@ -267,6 +260,7 @@ class Mago extends Personagem {
 class Arqueiro extends Personagem {
   #tipoArco;
   #precisao;
+
   constructor(
     nome,
     vida,
@@ -297,7 +291,7 @@ class Arqueiro extends Personagem {
     this.#precisao = precisao;
   }
 
-  atacar(tipoAtaque) {
+  atacar() {
     return `${this.nome} atira uma flecha com precisão de ${this.#precisao}!`;
   }
 
@@ -305,20 +299,12 @@ class Arqueiro extends Personagem {
     return `${this.nome} se esconde atrás de uma árvore!`;
   }
 
-  usarMagia() {
-    return `${this.nome} não usa magia, mas tem habilidades especiais com arco!`;
-  }
-
   ganharExperiencia() {
     this.experiencia += 120;
   }
 
   info() {
-    return `Arqueiro: ${this.nome}, Vida: ${this.vida}, Força: ${
-      this.forca
-    }, Defesa: ${this.defesa}, Tipo de Arco: ${this.#tipoArco}, Precisão: ${
-      this.#precisao
-    }`;
+    return `Arqueiro: ${this.nome}, Vida: ${this.vida}, Força: ${this.forca}, Defesa: ${this.defesa}, Tipo de Arco: ${this.#tipoArco}, Precisão: ${this.#precisao}`;
   }
 
   atirarFlecha() {
@@ -329,6 +315,7 @@ class Arqueiro extends Personagem {
 class Ladino extends Personagem {
   #habilidadeFurtiva;
   #agilidade;
+
   constructor(
     nome,
     vida,
@@ -359,7 +346,7 @@ class Ladino extends Personagem {
     this.#agilidade = agilidade;
   }
 
-  atacar(tipoAtaque) {
+  atacar() {
     return `${this.nome} ataca furtivamente!`;
   }
 
@@ -376,11 +363,7 @@ class Ladino extends Personagem {
   }
 
   info() {
-    return `Ladino: ${this.nome}, Vida: ${this.vida}, Força: ${
-      this.forca
-    }, Defesa: ${this.defesa}, Habilidade Furtiva: ${
-      this.#habilidadeFurtiva
-    }, Agilidade: ${this.#agilidade}`;
+    return `Ladino: ${this.nome}, Vida: ${this.vida}, Força: ${this.forca}, Defesa: ${this.defesa}, Habilidade Furtiva: ${this.#habilidadeFurtiva}, Agilidade: ${this.#agilidade}`;
   }
 
   desaparecer() {
@@ -402,9 +385,17 @@ const guerreiro = new Guerreiro(
   "Escudo",
   30
 );
+console.log(guerreiro.atacar());
+console.log(guerreiro.defender());
+guerreiro.ganharExperiencia();
+console.log(guerreiro.info());
+console.log(guerreiro.gritarGuerra());
+
 const mago = new Mago(
   "Gandalf",
   80,
   5,
   5,
+  1,
+  
 )
